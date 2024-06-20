@@ -4,8 +4,7 @@
 
 @model BestRestaurants.Models.Restaurant
 
-<h2>Restaurant Details</h2>
-<h4>@Html.DisplayFor(model => model.Name)</h4>
+<h2>@Html.DisplayFor(model => model.Name)</h2>
 <p>
   @Html.DisplayNameFor(model => model.Cuisine):
   @Html.ActionLink(Html.DisplayTextFor(model => model.Cuisine.Type), "Details", "Cuisines", new { id = Html.DisplayTextFor(model => model.CuisineId) })

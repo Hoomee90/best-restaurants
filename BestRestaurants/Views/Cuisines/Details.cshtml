@@ -5,12 +5,11 @@
 @model BestRestaurants.Models.Cuisine
 @using BestRestaurants.Models
 
-<h2>Cuisine Details</h2>
-<h4>@Html.DisplayFor(model => model.Type)</h4>
+<h2>@Html.DisplayFor(model => model.Type)</h2>
 
 @if (@Model.Restaurants.Count == 0)
 {
-  <h3>No restaurants are serving this cuisine yet!</h3>
+  <p>No restaurants are serving this cuisine yet!</p>
 } 
 else
 {
