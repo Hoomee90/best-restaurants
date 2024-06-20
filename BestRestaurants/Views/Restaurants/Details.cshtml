@@ -6,7 +6,10 @@
 
 <h2>Restaurant Details</h2>
 <h4>@Html.DisplayFor(model => model.Name)</h4>
-<p>@Html.DisplayNameFor(model => model.Cuisine): @Html.DisplayFor(model => model.Cuisine.Type)</p>
+<p>
+  @Html.DisplayNameFor(model => model.Cuisine):
+  @Html.ActionLink(Html.DisplayTextFor(model => model.Cuisine.Type), "Details", "Cuisines", new { id = Html.DisplayTextFor(model => model.CuisineId) })
+</p>
 <p>@Html.DisplayNameFor(model => model.Address): @Html.DisplayFor(model => model.Address)</p>
 
 <p>@Html.ActionLink("Edit Restaurant", "Edit", new { id = Model.RestaurantId })</p>
