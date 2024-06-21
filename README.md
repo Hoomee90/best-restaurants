@@ -16,7 +16,7 @@
 
 ## Description
 
-Description
+This site allows users to fill out a form to create restaurant items with various attributes. They can also make cuisine items, and associate each restaurant with a cuisine
 
 ## Setup/Installation Requirements
 
