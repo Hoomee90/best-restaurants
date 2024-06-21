@@ -1,8 +1,8 @@
-# Title
+# Best Restaurants
 
 #### By **Samantha Callie**
 
-#### Subtitle
+#### Track restaurants and their cuisine in this poorly disguised todo list
 
 ## Technologies Used
 
@@ -22,9 +22,21 @@ Description
 
 1. Press the green <> Code button and select Download ZIP
 2. Unzip file
-4. Open your terminal (e.g., Terminal or GitBash) and navigate to this project's production directory called "BestRestaurants".
-5. In the command line, run the command `dotnet run` to compile and execute the application. Then navigate to https://localhost:5001.
-6. Optionally, you can run `dotnet run --launch-profile "production"` to run in the run in production mode, as oppose to development.
+3. Open your terminal (e.g., Terminal or GitBash) and navigate to this project's production directory called "BestRestaurants".
+4. Within that directory, create a file called `appsettings.json`
+5. In `appsettings.json`, paste the following code, replacing the `uid` and `pwd` values with your own username and password for MySQL.
+```json
+{
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=localhost;Port=3306;database=best_restaurants;uid=YOUR_USERNAME;pwd=YOUR_PASSWORD;"
+  }
+}
+```
+6. Open MySQL Workbench, and click on "Data Import/Restore"
+7. Select "Import From Self-Contained File" and input the path (or select the three dots and navigate) to the `best_restaurants.sql` file contained in "PosterInventory.Solution"
+8. Select "Dump Structure Only" and hit import.
+9. In the command line, run the command `dotnet run` to compile and execute the application. Then navigate to https://localhost:5001.
+10. Optionally, you can run `dotnet run --launch-profile "production"` to run in the run in production mode, as oppose to development.
 
 ## Known Bugs
 
